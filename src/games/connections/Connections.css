@@ -1,0 +1,162 @@
+.cx-prompt {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.cx-board {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cx-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.cx-tile {
+  aspect-ratio: 1 / 0.78;
+  border: none;
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text-strong);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 4px 2px;
+  transition:
+    background 120ms ease,
+    transform 80ms ease;
+  overflow-wrap: anywhere;
+}
+
+.cx-tile.is-long {
+  font-size: 0.68rem;
+}
+
+.cx-tile:hover {
+  background: #2f2444;
+}
+
+.cx-tile.is-selected {
+  background: var(--text-muted);
+  color: var(--bg);
+  transform: scale(0.97);
+}
+
+.cx-tile.is-shaking {
+  animation: cx-shake 420ms ease;
+}
+
+.cx-solved {
+  border-radius: 8px;
+  padding: 12px 10px;
+  text-align: center;
+  color: #1a1226;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  animation: cx-reveal 320ms ease-out;
+}
+
+.cx-solved strong {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #1a1226;
+}
+
+.cx-solved span {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.cx-level-0 {
+  background: var(--level-0);
+}
+.cx-level-1 {
+  background: var(--level-1);
+}
+.cx-level-2 {
+  background: var(--level-2);
+}
+.cx-level-3 {
+  background: var(--level-3);
+}
+
+.cx-lives {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.cx-dots {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.cx-dots i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: block;
+}
+
+.cx-dots i.on {
+  background: var(--text);
+}
+
+.cx-dots i.off {
+  background: var(--surface-2);
+}
+
+.cx-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cx-actions .btn {
+  padding: 11px 18px;
+  font-size: 0.85rem;
+}
+
+.cx-summary-grid {
+  font-size: 1.35rem;
+  line-height: 1.25;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.cx-summary-note {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+@keyframes cx-shake {
+  10%,
+  50% {
+    transform: translateX(-5px);
+  }
+  30%,
+  70% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes cx-reveal {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+}

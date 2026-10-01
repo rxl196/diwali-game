@@ -1,0 +1,181 @@
+.xw-timer {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.xw-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: #6d5f8a;
+  padding: 2px;
+  border-radius: 4px;
+  width: min(320px, 84vw);
+}
+
+.xw-grid-row {
+  display: flex;
+  gap: 2px;
+}
+
+.xw-cell {
+  position: relative;
+  flex: 1;
+  aspect-ratio: 1;
+  border: none;
+  padding: 0;
+  background: #241b36;
+  color: var(--text-strong);
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  text-transform: uppercase;
+}
+
+.xw-cell.is-block {
+  background: #0b0812;
+  cursor: default;
+}
+
+.xw-cell.is-in-clue {
+  background: #4a376e;
+}
+
+.xw-cell.is-cursor {
+  background: var(--accent);
+  color: #1a0f05;
+}
+
+.xw-num {
+  position: absolute;
+  top: 1px;
+  left: 3px;
+  font-size: 0.58rem;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.75;
+}
+
+.xw-letter {
+  line-height: 1;
+}
+
+.xw-cluebar {
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+  width: min(420px, 100%);
+  background: var(--surface-2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.xw-arrow {
+  background: var(--surface);
+  border: none;
+  color: var(--text);
+  font-size: 1.3rem;
+  width: 42px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.xw-arrow:hover {
+  color: var(--accent);
+}
+
+.xw-clue-text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 10px;
+  font-size: 0.9rem;
+  min-height: 52px;
+}
+
+.xw-clue-text strong {
+  color: var(--accent);
+  flex-shrink: 0;
+  font-size: 0.82rem;
+}
+
+.xw-hidden-input {
+  position: absolute;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+  pointer-events: none;
+}
+
+.xw-clue-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.xw-clue-list h3 {
+  margin: 0 0 6px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.xw-clue-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.xw-clue-list button {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--text);
+  padding: 5px 7px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.xw-clue-list button b {
+  color: var(--text-muted);
+  margin-right: 3px;
+}
+
+.xw-clue-list button:hover {
+  background: var(--surface-2);
+}
+
+.xw-clue-list button.is-active {
+  background: var(--accent-soft);
+  color: var(--text-strong);
+}
+
+.xw-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.xw-actions .btn {
+  padding: 10px 16px;
+  font-size: 0.82rem;
+}
+
+.xw-summary-time {
+  text-align: center;
+  font-size: 1.05rem;
+  color: var(--text-strong);
+}

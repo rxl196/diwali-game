@@ -1,0 +1,177 @@
+.hub {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 40px 20px 64px;
+}
+
+.hub-head {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.hub-lamps {
+  font-size: 1.8rem;
+  letter-spacing: 8px;
+  margin-bottom: 8px;
+}
+
+.hub-head h1 {
+  margin: 0 0 6px;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hub-head p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.hub-list {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hub-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text);
+  transition:
+    border-color 140ms ease,
+    transform 100ms ease,
+    background 140ms ease;
+}
+
+.hub-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.hub-card.is-done {
+  background: linear-gradient(var(--surface), var(--surface)) padding-box,
+    linear-gradient(120deg, var(--accent), var(--accent-2)) border-box;
+  border-color: transparent;
+}
+
+.hub-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.hub-card-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.hub-card-text strong {
+  color: var(--text-strong);
+  font-size: 1.02rem;
+}
+
+.hub-card-text span {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.hub-status {
+  flex-shrink: 0;
+}
+
+.hub-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-strong);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+
+.hub-play {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hub-progress {
+  margin: 4px 0 20px;
+}
+
+.hub-bar {
+  height: 7px;
+  background: var(--surface-2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.hub-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition: width 320ms ease;
+}
+
+.hub-progress p {
+  margin: 8px 0 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.hub-reset {
+  display: block;
+  margin: 18px auto 0;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.share-hint {
+  margin-top: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.share-box {
+  width: 100%;
+  background: var(--bg);
+  color: var(--text-strong);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  font-family: 'Segoe UI Emoji', 'Apple Color Emoji', var(--sans);
+  font-size: 0.86rem;
+  line-height: 1.45;
+  resize: vertical;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.share-nudge {
+  margin: 12px 0 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--accent);
+}

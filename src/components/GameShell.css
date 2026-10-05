@@ -67,3 +67,15 @@
     display: none;
   }
 }
+
+.game-foot {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.game-foot .cc-logo {
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}

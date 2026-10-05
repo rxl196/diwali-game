@@ -1,0 +1,32 @@
+.cc-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.cc-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.cc-logo-large img {
+  max-width: 132px;
+}
+
+.cc-logo-small img {
+  max-width: 44px;
+}
+
+.cc-logo-caption {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.cc-logo-small .cc-logo-caption {
+  font-size: 0.7rem;
+}

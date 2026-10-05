@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { CultureClubLogo } from './CultureClubLogo'
 import './GameShell.css'
 
 type GameShellProps = {
@@ -39,6 +40,9 @@ export function GameShell({
         )}
       </header>
       <main className="game-body">{children}</main>
+      <footer className="game-foot">
+        <CultureClubLogo size="small" caption="An SMT Culture Club event" />
+      </footer>
     </div>
   )
 }

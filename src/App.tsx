@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { CultureClubLogo } from './components/CultureClubLogo'
 import { Modal } from './components/Modal'
 import { Toast } from './components/Toast'
 import { useToast } from './components/useToast'
@@ -62,6 +63,7 @@ export default function App() {
   return (
     <div className="hub">
       <header className="hub-head">
+        <CultureClubLogo caption="An SMT Culture Club event" />
         <div className="hub-lamps" aria-hidden="true">
           🪔 🪔 🪔
         </div>
